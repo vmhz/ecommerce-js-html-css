@@ -156,6 +156,7 @@ const productPrint = () => {
             `<article class="prod__cardbuy ${category}" data-id="${id}" data-category="${category}">
         <section class="prod__card">
             <div class="prod__img">
+                <span class="prod__price__top">$${price}</span>
                 <img src="${img}" alt="">
             </div>
 

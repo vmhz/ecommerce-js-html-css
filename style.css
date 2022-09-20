@@ -33,6 +33,7 @@ header {
     display: flex;
     background-color: var(--primary-color);
     justify-content: center;
+    color: #fff;
 }
 
 body {
@@ -156,7 +157,9 @@ footer {
     font-size: 1.5rem;
 
 }
-
+.nav__icons .bxs-sun{
+    display: none;
+}
 
 /* ************ | CARD CSS | ***************  */
 .prod__cardbuy {
@@ -234,16 +237,17 @@ footer {
     transition: transform 0.4s;
 }
 
-.prod__card:hover .prod__img::before {
-    transform: rotateZ(42deg) scale(1.5);
-    border-radius: unset;
-    animation-name: prod__img--before;
-    /* top: 18%; */
-    /* top: -37%; */
-    left: 31%;
-}
 
 .prod__img::before {
+    box-shadow: 0 0 2px 20px transparent;
+}
+
+.prod__img::after {
+    box-shadow: -3px -9px 10px 10px #aaddff7a;
+}
+
+.prod__img::before,
+.prod__img::after {
     content: '';
     position: absolute;
     top: -53%;
@@ -252,11 +256,20 @@ footer {
     height: 9rem;
     background: #8e7bef40;
     transform: rotateZ(47deg);
-    transition: transform 0.5s, top 0.5s,left 0.5s;
-    box-shadow: -3px -9px 10px 10px #aaddff7a;
+    /* box-shadow: -3px -9px 10px 10px #aaddff7a; */
+    transition: transform 0.5s, top 0.5s, box-shadow 400ms;
 }
-.prod__img::after {
-    content: "$ 950";
+
+.prod__card:hover .prod__img::before {
+    /* transform: rotateZ(42deg) scale(1.5); */
+    width: 140%;
+    border-radius: unset;
+    box-shadow: 0 0 15px 2px #675aad40;
+    left: 31%;
+}
+
+
+.prod__price__top {
     font-weight: 300;
     right: 0px;
     position: absolute;
@@ -264,7 +277,8 @@ footer {
     font-size: 1.2em;
     transform: rotateZ(47deg);
     top: 16px;
-  }
+}
+
 /* .prod__card:hover .prod__img {
     height: 40%;
 } */
