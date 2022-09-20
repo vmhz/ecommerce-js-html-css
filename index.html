@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style-dark.css"> -->
+    <link id="style" rel="stylesheet" href="style.css">
+    <!-- <script src="https://kit.fontawesome.com/ce1c52079c.js" crossorigin="anonymous"></script> -->
+
+
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="nav__logo">
+                <img class="nav__logo__img" src="./assets/images/academlo.jpg" alt="Academlo" srcset="">
+            </div>
+            <div class="nav__utilidades">
+                <input type="checkbox" class="nav__menu" name="nav__menu" id="nav__menu">
+                <label for="nav__menu">
+                    <i class='bx bx-dots-vertical hidden nav__menu'></i>
+                </label>
+                <nav id="nav" class="nav">
+                    <a href="#index">Store</a>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                </nav>
+            </div>
+            <div class="nav__icons" id="nav__icons">
+                <i id="theme__document" theme class='bx bxs-sun'></i>
+                <i cart class='bx bx-cart'></i>
+            </div>
+        </div>
+    </header>
+    <div class="home">
+        <div class="img__home">
+        </div>
+
+        <div class="home__text">
+            Ecommerce
+        </div>
+    </div>
+    <main id="main">
+        <div>
+        </div>
+        <section class="categorys">
+            <div class="category" data-filter="all">
+                <input type="radio" name="category" class="hidden" id="category:1">
+                <label for="category:1" class="description" id="categoria1">
+                    <span class="category__title">Show All</span>
+                    <span class="category__subtitle">show all products</span>
+                </label>
+            </div>
+            <div class="category" data-filter=".mobile_phone">
+                <input type="radio" name="category" class="hidden" id="category:2">
+                <label for="category:2" class="description">
+                    <span class="category__title">Telefonos Celulares</span>
+                    <span class="category__subtitle">3 products</span>
+                </label>
+            </div>
+            <div class="category" data-filter=".tablet">
+                <input type="radio" name="category" class="hidden" id="category:3">
+                <label for="category:3" class="description">
+                    <span class="category__title">Tablets</span>
+                    <span class="category__subtitle">5 products</span>
+                </label>
+            </div>
+            <div class="category" data-filter=".laptop">
+                <input type="radio" name="category" class="hidden" id="category:4">
+                <label for="category:4" class="description">
+                    <span class="category__title">Laptops</span>
+                    <span class="category__subtitle">10 products</span>
+                </label>
+            </div>
+            <div class="category" data-filter=".asesorios">
+                <input type="radio" name="category" class="hidden" id="category:5">
+                <label for="category:5" class="description">
+                    <span class="category__title">Accesorios</span>
+                    <span class="category__subtitle">10 products</span>
+                </label>
+            </div>
+        </section>
+
+        <section class="prod__cards">
+
+            <!--  ************   CARD DE PRODUCTO  ****************    -->
+            <article class="prod__cardbuy">
+                <section class="prod__card">
+                    <div class="prod__img">
+                        <img src="./assets/images/producto.png" alt="">
+                    </div>
+
+                    <div class="prod__inf">
+                        <h4>WIRELESS HEADPHONES</h4>
+                        <div class="prod__decription">
+                            <span class="prod__price">$40.99</span>
+
+                            <span>
+                                | Stock:
+                                <span class="prod__stock">23</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="prod__buy">
+                    <div class="prod__amount">
+                        <span class="amount__btn remove"><i class='bx bx-minus'></i></span>
+                        <input type="text" class="cant__prod" value="1">
+                        <span class="amount__btn add"><i class='bx bx-plus'></i></span>
+                    </div>
+                    <span class="btn_buy" id="btn_buy">Buy</span>
+                </section>
+            </article>
+
+            <!-- ****************FIN CARD PRODUCTO************************ -->
+
+        </section>
+
+
+        <!-- MODAL DERCHO DEL CARRITO    (añadir o quitar hidden de la clase para mostrar ya está agregado animacion) -->
+
+        <aside id="contenedor__carrito" class="contenedor__carrito contenedor__carrito--hidden">
+
+            <h3 class="carrito__title" id="trashglobal">
+                Productos<i class='bx bx-trash icontrash' id="incontrashGlobal"></i>
+
+            </h3>
+
+
+            <div class="carrito__productos">
+
+                <!--  *********    Articulo card  ******************* -->
+
+
+                </section>
+                <section data-id="1" data-category="audio" class="art__card">
+                    <figure class="art__img">
+                        <img src="assets/images/GalaxyS8_PCD.jpg" alt="" class="img_art" id="img_art">
+                    </figure>
+
+                    <content class="art__inf">
+                        <h4>Titulo</h4>
+                        <div class="art__decription">
+                            <span class="art__price">40.00</span>
+                        </div>
+                        <div class="cart__amount">
+                            <div class="amount__btn cart-btn rest">-</div>
+                            <span class="art_cant" id="art_cant">10</span>
+                            <div class="amount__btn cart-btn add">+</div>
+                        </div>
+                    </content>
+
+                    <div class="trashBx">
+                        <i class='bx bx-trash icontrash'></i>
+
+                    </div>
+                </section>
+                <!-- ************fin card articulo del carrito*********** -->
+
+            </div>
+
+
+            <!-- <span class="btn_buy" id="btn_buy">Buy</span> -->
+
+            </div>
+            <div class="checkout">
+                <input placeholder="Introduce tu nombre" type="text" name="NAMECLIENT" class="NAMECLIENT" required>
+                <p class="checkout-total">total:<span id="total-print"></span></p>
+                <button class="checkout-button" id="checkoutButton">Checkout</button>
+            </div>
+        </aside>
+
+        <!-- ***************************fin modal carrito********************** -->
+
+    </main>
+    <footer>
+        <h4 class="footer__text">Desarrollado por Grupo 7 Generación 16 ©</h4>
+    </footer>
+    <script src="./assets/js/main.js" type="module"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/animaciones.js"></script>
+    <!-- <script src="https://unpkg.com/mixitup@3.3.0/dist/mixitup.js"></script> -->
+</body>
+
+</html>
